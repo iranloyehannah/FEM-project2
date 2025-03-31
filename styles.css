@@ -1,0 +1,290 @@
+:root {
+  /* Primary */
+  --Very-Dark-Magenta: hsl(303, 46%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+body,
+html {
+  height: 100%;
+}
+body { 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--White);
+  position: relative;
+}
+body > .img-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+body > .img-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+body>.img-3,
+body>.img-4{
+  display: none;
+}
+main {
+  margin-top: -70px;
+  width: 1000px;
+  height: 30vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+main .container-1,
+main .container-2 {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 30vh;
+}
+.container-1 .cont-1-wrap {
+  place-content: center;
+  width: 400px;
+  color: var(--Very-Dark-Magenta);
+}
+.container-1 .cont-1-wrap h2 {
+  font-weight: 900;
+  width: 280px;
+  height: 120px;
+  font-size: 30px;
+  font-family: "League Spartan", sans-serif;
+}
+.container-1 .cont-1-wrap p {
+  font-size: 14px;
+  width: 380px;
+  color: var(--Dark-Grayish-Magenta);
+}
+.container-2 {
+  padding-left: 0;
+  padding-right: 60px;
+}
+.container-2 .cont-2-wrap {
+  border-radius: 5px;
+  width: 350px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 11px;
+  background-color: #f7f3f8;
+  color: var(--Very-Dark-Magenta);
+  margin: 7px;
+}
+.container-2 .cont-2-wrap:nth-child(1) {
+  margin-top: 20px;
+}
+.container-2 .cont-2-wrap:nth-child(2) {
+  margin-left: 40px;
+}
+.container-2 .cont-2-wrap:nth-child(3) {
+  margin-left: 60px;
+}
+
+.container-2 .icon-svg img {
+  width: 13px;
+  height: 13px;
+  margin-left: 2px;
+}
+.container-2 .text {
+  padding-left: 20px;
+}
+#card {
+  margin-top: 50px;
+  width: 1000px;
+  height: 30vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#card .card-1 {
+  padding: 10px;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: var(--Very-Dark-Magenta);
+}
+#card .card-1:nth-child(2) {
+  color: black;
+  margin-top: 30px;
+}
+#card .card-1:nth-child(3) {
+  margin-top: 50px;
+}
+#card .card-1 .card-img {
+  margin: 10px 0px 20px 20px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#card .card-1 .card-img .img-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-1 .card-img .img-wrap img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+}
+#card .card-1 .card-img .text-wrap {
+  text-align: left;
+  padding-left: 20px;
+}
+#card .card-1 .card-img .text-wrap > h4 {
+  padding-bottom: 3px;
+  color: var(--White);
+}
+#card .card-1 .card-img .text-wrap > p {
+  color: var(--Soft-Pink);
+  font-size: 13px;
+}
+#card .card-1 .card-text {
+  margin: auto;
+  width: 240px;
+  text-align: left;
+  line-height: 20px;
+}
+#card .card-1 .card-text p {
+  color: var(--White);
+  font-weight: 400;
+  font-size: 13px;
+}
+@media (max-width:768px){
+  body{
+    height: auto;
+    min-height: 100vh;
+  }
+  body>.img-1,
+  body>.img-2{
+      display: none;
+    }
+    body>.img-3{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    body>.img-4{
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  main {
+      width: 100%;
+      min-height: 80vh; 
+     padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  main .container-1 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40vh;
+  padding: 10px;
+}
+.container-1 .cont-1-wrap {
+  text-align: center;
+  width: 100%;
+  color: var(--Very-Dark-Magenta);
+}
+.container-1 .cont-1-wrap h2 {
+  margin: auto;
+  font-weight: 900;
+  width: 280px;
+  height: 120px;
+  font-size: 30px;
+  font-family: "League Spartan", sans-serif;
+}
+.container-1 .cont-1-wrap p{
+  margin:10px auto;
+  font-size: 15px;
+  width: 280px;
+  color: var(--Dark-Grayish-Magenta);
+}
+main .container-2{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-2 .cont-2-wrap:nth-child(1) {
+  margin-top: 0;
+}
+.container-2 .cont-2-wrap:nth-child(2) {
+  margin-left: 0;
+}
+.container-2 .cont-2-wrap:nth-child(3) {
+  margin-left: 0;
+}
+
+main .container-2 .cont-2-wrap {
+  border-radius: 5px;
+  width: 300px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  gap: 5px;
+  font-size: 11px;
+  background-color: #f7f3f8;
+  color: var(--Very-Dark-Magenta);
+  margin: 0;
+}
+#card {
+  margin-top: -1px;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#card .card-1 {
+  padding: 0;
+  width: 305px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: var(--Very-Dark-Magenta);
+}
+}
